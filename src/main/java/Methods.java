@@ -23,7 +23,7 @@ public class Methods {
         return c;
     }
 
-    // 1 - Modificador de access
+    // 1- Modificador de access
     // 2- static or non static
     // 3- Return (Int, Double, Obj, Array, List)
     // 4- Nombre del metodo
