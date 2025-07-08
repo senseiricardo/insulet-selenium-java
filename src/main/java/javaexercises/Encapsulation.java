@@ -1,4 +1,4 @@
-import java.awt.desktop.SystemEventListener;
+package javaexercises;
 
 public class Encapsulation {
     public static void main(String[] args){
@@ -24,7 +24,7 @@ class Persona{
     private String nombre;
     private int edad;
 
-    // Constructor
+    // javaexercises.Constructor
     public Persona(String nombre, int edad){
         this.nombre = nombre;
         this.edad = edad;
@@ -34,7 +34,7 @@ class Persona{
 
     }
 
-    // Getters and setters - Encapsulation
+    // Getters and setters - javaexercises.Encapsulation
 
     public String getNombre(){
         return nombre;

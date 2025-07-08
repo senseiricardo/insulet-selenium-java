@@ -1,3 +1,5 @@
+package javaexercises;
+
 public class VariablesPrimitiveTypes {
     public static void main(String[] args){
         // Variables

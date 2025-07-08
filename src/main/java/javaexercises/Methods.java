@@ -1,3 +1,5 @@
+package javaexercises;
+
 public class Methods {
 
     // Metodo main

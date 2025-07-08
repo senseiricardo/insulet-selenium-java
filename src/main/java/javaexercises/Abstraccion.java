@@ -1,3 +1,5 @@
+package javaexercises;
+
 public class Abstraccion {
     public static void main(String[] args){
         Figura figura = new Circulo(5);

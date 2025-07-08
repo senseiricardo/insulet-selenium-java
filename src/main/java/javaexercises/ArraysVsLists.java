@@ -1,3 +1,5 @@
+package javaexercises;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -30,7 +32,7 @@ public class ArraysVsLists {
         // Listas
 
         List<String> animales = new ArrayList<>();
-        animales.add("Perro");
+        animales.add("javaexercises.Perro");
         animales.add("Gato");
         animales.add("Tortuga");
 
@@ -38,7 +40,7 @@ public class ArraysVsLists {
             System.out.println(animal);
         }
 
-        animales.remove("Perro");
+        animales.remove("javaexercises.Perro");
         animales.add("Peces");
 
         System.out.println("Lista Modificada");

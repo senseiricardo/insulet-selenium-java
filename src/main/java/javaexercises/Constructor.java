@@ -1,3 +1,5 @@
+package javaexercises;
+
 public class Constructor {
     public static void main(String[] args){
 
@@ -27,7 +29,7 @@ class Bartender{
     String estilo;
     String nombreBar;
 
-    public Bartender(){ // Constructor embebido
+    public Bartender(){ // javaexercises.Constructor embebido
 
     }
 
