@@ -1,0 +1,4 @@
+{
+  "user_is_required": "Epic sadface: Username is required",
+  "user_does_not_exist": "Username and password do not match any user in this service"
+}

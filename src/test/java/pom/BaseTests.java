@@ -3,8 +3,10 @@ package pom;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import pages.CheckoutPage;
 import pages.InventoryPage;
 import pages.LoginPage;
+import utils.ConfigReader;
 import utils.DriverFactory;
 
 public class BaseTests {
@@ -12,6 +14,7 @@ public class BaseTests {
     private WebDriver driver;
     LoginPage loginPage;
     InventoryPage invPage;
+    CheckoutPage checkoutPage;
 
     public WebDriver getDriver(){
         return driver;
@@ -22,8 +25,9 @@ public class BaseTests {
         driver = DriverFactory.initializeDriver();
         loginPage = new LoginPage(driver);
         invPage = new InventoryPage(driver);
+        checkoutPage = new CheckoutPage(driver);
 
-        DriverFactory.launchBrowser("https://www.saucedemo.com/v1/index.html");
+        DriverFactory.launchBrowser(ConfigReader.get("baseUrl"));
     }
 
     @AfterMethod

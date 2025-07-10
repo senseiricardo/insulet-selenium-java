@@ -4,6 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.InvalidElementStateException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class BasePage {
     protected WebDriver driver;
@@ -47,6 +51,15 @@ public class BasePage {
             return driver.findElement(locator).isDisplayed();
         }catch(NoSuchElementException e){
             return false;
+        }
+    }
+
+    public void waitForElementPresent(By locator){
+        try{
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+            wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        }catch(NoSuchElementException e){
+            e.printStackTrace();
         }
     }
 
