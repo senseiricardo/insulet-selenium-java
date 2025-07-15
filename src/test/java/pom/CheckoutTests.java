@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class CheckoutTests extends BaseTests{
 
-    @Test
+    @Test(groups = "e2e")
     public void tc08() throws InterruptedException {
         loginPage.login("standard_user", "secret_sauce");
         invPage.clickAnyAddToCart();

@@ -7,19 +7,19 @@ import utils.UserData;
 
 public class LoginTests extends BaseTests{
 
-    @Test
+    @Test(groups = "e2e")
     public void tc01(){
         loginPage.login(UserData.getUsername("standard"), UserData.getPassword("standard"));
         Assert.assertEquals(invPage.getProductLabel(), "Products");
     }
 
-    @Test
+    @Test(groups = "e2e")
     public void tc02(){
         loginPage.login(UserData.getUsername("locked"), UserData.getPassword("locked"));
-        Assert.assertTrue(loginPage.getLoginErrorMessages().contains("locked out"), "\"Error message is not valid\"");
+        Assert.assertTrue(loginPage.getLoginErrorMessages().contains("locked out2"), "\"Error message is not valid\"");
     }
 
-    @Test
+    @Test(groups = "e2e")
     public void tc03(){
         loginPage.login(UserData.getUsername("incorrect"), UserData.getPassword("incorrect"));
         Assert.assertTrue(loginPage.getLoginErrorMessages().contains("Username and password do not match any user in this service"));
@@ -31,7 +31,7 @@ public class LoginTests extends BaseTests{
         Assert.assertEquals(loginPage.getLoginErrorMessages(), "Epic sadface: Username is required");
     }
 
-    @Test
+    @Test(groups = "e2e")
     public void tc010() throws InterruptedException {
         loginPage.login(UserData.getUsername("standard"), UserData.getPassword("standard"));
         invPage.logout();

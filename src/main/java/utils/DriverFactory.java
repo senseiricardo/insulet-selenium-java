@@ -11,6 +11,11 @@ import java.util.Map;
 public class DriverFactory {
 
     private static WebDriver driver;
+    private static final ThreadLocal<WebDriver> driverThread = new ThreadLocal<>();
+
+    public static WebDriver getDriver(){
+        return driverThread.get();
+    }
 
     public static WebDriver initializeDriver(){
         //WebDriverManager.chromedriver().setup();
@@ -25,11 +30,12 @@ public class DriverFactory {
         options.addArguments("--disable-blink-features=AutomationControlled");
 
         driver = new ChromeDriver(options);
-        return driver;
+        driverThread.set(driver);
+        return getDriver();
     }
 
     public static void launchBrowser(String url){
-        driver.get(url);
+        getDriver().get(url);
     }
 
     public static String getCurrentUrl(){

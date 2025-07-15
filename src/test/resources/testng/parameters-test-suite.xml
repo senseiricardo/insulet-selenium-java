@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Parameter suite">
+    <test name="Parameter Test execution">
+        <parameter name="username" value="standard_user"></parameter>
+        <parameter name="password" value="secret_sauce"></parameter>
+        <classes>
+            <class name="pom.TestSuitesExamplesTests">
+                <methods>
+                    <include name="testSuiteParameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

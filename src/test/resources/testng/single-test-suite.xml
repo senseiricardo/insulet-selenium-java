@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="BasicSuite">
+    <listeners>
+        <listener class-name="listeners.AllureListener"/>
+    </listeners>
+    <test name="LoginTestExecution">
+        <classes>
+            <class name="pom.LoginTests"/>
+        </classes>
+    </test>
+</suite>
