@@ -56,3 +56,5 @@ jobs:
           publish_branch: gh-pages
           publish_dir: target/allure-report
           destination_dir: allure-report
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
