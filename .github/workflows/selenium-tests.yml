@@ -1,6 +1,7 @@
 name: Run Selenium Tests
 
 on:
+  workflow_dispatch:  # Enable it manual execution
   push:
     branches: [ "master", "main" ]
   pull_request:
