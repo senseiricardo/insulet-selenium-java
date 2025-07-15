@@ -29,6 +29,16 @@ public class DriverFactory {
         options.setExperimentalOption("prefs", prefs);
         options.addArguments("--disable-blink-features=AutomationControlled");
 
+        // CI/CD Implementation
+        if(System.getenv("CI") != null){
+            options.addArguments("--headless");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--remote-allow-origins=*"); // CORS error
+            options.addArguments("--disable-gpu");
+            options.addArguments("--user-data-dir=/tmp/chrome-" + System.currentTimeMillis()); // Add temporary directory to avoid errors
+        }
+
         driver = new ChromeDriver(options);
         driverThread.set(driver);
         return getDriver();
