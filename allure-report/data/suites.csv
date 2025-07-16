@@ -1,2 +1,2 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","345","tc01Smoke","Surefire suite","Wed Jul 16 23:35:00 UTC 2025","passed","Wed Jul 16 23:35:01 UTC 2025","pom.SmokeTests","Surefire test","pom.SmokeTests","tc01Smoke"
+"","1272","tc01Smoke","Surefire suite","Wed Jul 16 23:49:10 UTC 2025","passed","Wed Jul 16 23:49:11 UTC 2025","pom.SmokeTests","Surefire test","pom.SmokeTests","tc01Smoke"
